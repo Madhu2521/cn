@@ -39,3 +39,10 @@ BufferedReader ifc =new BufferedReader
 (new InputStreamReader(consoc.getInputStream()));
 DataOutputStream otc =new DataOutputStream(consoc.getOutputStream());
 String cs=ifc.readLine()+'\n';
+System.out.println("RECEIVED : "+cs);
+String GET_URL = cs;
+otc.writeBytes(sendGET(GET_URL)+'\n');
+System.out.println("GET DONE");
+}
+}
+}
